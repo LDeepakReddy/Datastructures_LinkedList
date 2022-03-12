@@ -40,6 +40,11 @@ public class LinkedList {
         newNode.next = temp;
 
     }
+    public Node  pop(){
+        Node tempNode=head;
+        head=head.next;
+        return tempNode;
+    }
 
     public void display() {
         Node current = head;

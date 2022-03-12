@@ -34,4 +34,11 @@ public class Operations {
 
 
     }
+    public LinkedList deleteFromStart(){
+        LinkedList list=addNodeInStart();
+        System.out.println();
+        list.pop();
+        list.display();
+        return list;
+    }
 }
