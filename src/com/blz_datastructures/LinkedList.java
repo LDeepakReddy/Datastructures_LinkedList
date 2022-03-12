@@ -22,7 +22,7 @@ public class LinkedList {
         }
     }
 
-    public void append(int data) {
+    public Node append(int data) {
         newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -31,8 +31,15 @@ public class LinkedList {
             tail.next = newNode;
             tail = newNode;
         }
+        return newNode;
     }
 
+    public void insertInBetween(Node node, Node newNode) {
+        Node temp = node.next;
+        node.next = newNode;
+        newNode.next = temp;
+
+    }
 
     public void display() {
         Node current = head;
