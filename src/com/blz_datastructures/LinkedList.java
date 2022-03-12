@@ -71,4 +71,29 @@ public class LinkedList {
         }
         System.out.println();
     }
+
+    public void search(int value) {
+        Node tempNode= head;
+        int count =1;
+        boolean flag = false;
+        if (head==null){
+            System.out.println("List is empty");
+            return;
+        }else {
+            while (tempNode != null){
+                if (tempNode.data==value){
+                    flag=true;
+                    break;
+                }
+                count++;
+                tempNode=tempNode.next;
+            }
+        }
+        if (flag){
+            System.out.println("Element found at " +count+ " position");
+        }else {
+            System.out.println("Element is not found");
+        }
+
+    }
 }

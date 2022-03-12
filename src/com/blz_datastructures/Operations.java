@@ -48,4 +48,10 @@ public class Operations {
         list.display();
         return list;
     }
+
+    public void searchElement() {
+        LinkedList list=addNodeInStart();
+        System.out.println();
+        list.search(30);
+    }
 }
