@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Enter 2 to Add data from End");
         System.out.println("Enter 3 to Add data in Between two values");
         System.out.println("Enter 4 to Delete data from Start");
+        System.out.println("Enter 5 to Delete data from End");
         switch (sc.nextInt()) {
             case 1:
                 operations.addNodeInStart();
@@ -23,6 +24,9 @@ public class Main {
                 break;
             case 4:
                 operations.deleteFromStart();
+                break;
+            case 5:
+                operations.deleteFromEnd();
                 break;
 
         }

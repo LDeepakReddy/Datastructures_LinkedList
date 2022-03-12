@@ -41,4 +41,11 @@ public class Operations {
         list.display();
         return list;
     }
+    public LinkedList deleteFromEnd(){
+        LinkedList list=addNodeInStart();
+        System.out.println();
+        list.popLast();
+        list.display();
+        return list;
+    }
 }
