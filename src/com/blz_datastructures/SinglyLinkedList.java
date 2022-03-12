@@ -27,10 +27,10 @@ public class SinglyLinkedList {
             System.out.println("List is empty");
             return;
         }
-        System.out.println("Nodes of single linked list");
+        System.out.println("Nodes of linked list");
         while (current!=null){
             if (current.next!=null) {
-                System.out.print(current.data + "===> ");
+                System.out.print(current.data + "==> ");
             }else {
                 System.out.println(current.data);
             }
