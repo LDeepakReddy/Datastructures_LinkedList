@@ -122,17 +122,18 @@ public class LinkedList {
         prevNode.next = newNode;
         newNode.next = nextNode;
     }
-    public void deleteNode(int key){
-        Node current=head;
-        Node tempNode=null;
-        while (current != null && current.data != key ){
-            tempNode=current;
-            current=current.next;
+
+    public void deleteNode(int key) {
+        Node current = head;
+        Node tempNode = null;
+        while (current != null && current.data != key) {
+            tempNode = current;
+            current = current.next;
 
         }
-        if (current==null){
+        if (current == null) {
             return;
         }
-        tempNode.next=current.next;
+        tempNode.next = current.next;
     }
 }

@@ -70,7 +70,7 @@ public class Operations {
     }
 
     public LinkedList deleteElement() {
-        LinkedList list=new LinkedList();
+        LinkedList list = new LinkedList();
         list.append(56);
         list.append(30);
         list.append(40);
@@ -82,10 +82,6 @@ public class Operations {
 
         list.size();
         list.display();
-
-
-
-        
 
 
         return list;
