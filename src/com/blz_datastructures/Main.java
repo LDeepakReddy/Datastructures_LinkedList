@@ -9,10 +9,12 @@ public class Main {
         Operations operations = new Operations();
         System.out.println("Enter 1 to Add data from start");
         System.out.println("Enter 2 to Add data from End");
-        System.out.println("Enter 3 to Add data in Between two values");
+        System.out.println("Enter 3 to Insert data in Between two values");
         System.out.println("Enter 4 to Delete data from Start");
         System.out.println("Enter 5 to Delete data from End");
         System.out.println("Enter 6 to Search an element");
+        System.out.println("Enter 7 to Insert the data in list");
+        System.out.println("Enter 8 to Delete the specific key");
         switch (sc.nextInt()) {
             case 1:
                 operations.addNodeInStart();
@@ -31,6 +33,12 @@ public class Main {
                 break;
             case 6:
                 operations.searchElement();
+                break;
+            case 7:
+                operations.insertInMiddle();
+                break;
+            case 8:
+                operations.deleteElement();
                 break;
 
         }

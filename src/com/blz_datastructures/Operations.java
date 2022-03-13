@@ -34,15 +34,17 @@ public class Operations {
 
 
     }
-    public LinkedList deleteFromStart(){
-        LinkedList list=addNodeInStart();
+
+    public LinkedList deleteFromStart() {
+        LinkedList list = addNodeInStart();
         System.out.println();
         list.pop();
         list.display();
         return list;
     }
-    public LinkedList deleteFromEnd(){
-        LinkedList list=addNodeInStart();
+
+    public LinkedList deleteFromEnd() {
+        LinkedList list = addNodeInStart();
         System.out.println();
         list.popLast();
         list.display();
@@ -50,8 +52,42 @@ public class Operations {
     }
 
     public void searchElement() {
-        LinkedList list=addNodeInStart();
+        LinkedList list = addNodeInStart();
         System.out.println();
         list.search(30);
+    }
+
+    public void insertInMiddle() {
+        LinkedList list = new LinkedList();
+        list.append(56);
+        list.append(30);
+        list.append(70);
+        System.out.println("Before inserting the data");
+        list.display();
+        list.insertMiddle(40);
+        System.out.println("After inserting the data");
+        list.display();
+    }
+
+    public LinkedList deleteElement() {
+        LinkedList list=new LinkedList();
+        list.append(56);
+        list.append(30);
+        list.append(40);
+        list.append(70);
+        list.display();
+
+        System.out.println("After deleting the key");
+        list.deleteNode(40);
+
+        list.size();
+        list.display();
+
+
+
+        
+
+
+        return list;
     }
 }

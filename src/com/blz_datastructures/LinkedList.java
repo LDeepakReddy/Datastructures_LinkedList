@@ -40,18 +40,20 @@ public class LinkedList {
         newNode.next = temp;
 
     }
-    public Node  pop(){
-        Node tempNode=head;
-        head=head.next;
+
+    public Node pop() {
+        Node tempNode = head;
+        head = head.next;
         return tempNode;
     }
-    public void popLast(){
-        Node tempNode=head;
-        while (tempNode.next !=tail){
-            tempNode=tempNode.next;
+
+    public void popLast() {
+        Node tempNode = head;
+        while (tempNode.next != tail) {
+            tempNode = tempNode.next;
         }
-        tail=tempNode;
-        tempNode.next=null;
+        tail = tempNode;
+        tempNode.next = null;
     }
 
     public void display() {
@@ -73,27 +75,64 @@ public class LinkedList {
     }
 
     public void search(int value) {
-        Node tempNode= head;
-        int count =1;
+        Node tempNode = head;
+        int count = 1;
         boolean flag = false;
-        if (head==null){
+        if (head == null) {
             System.out.println("List is empty");
             return;
-        }else {
-            while (tempNode != null){
-                if (tempNode.data==value){
-                    flag=true;
+        } else {
+            while (tempNode != null) {
+                if (tempNode.data == value) {
+                    flag = true;
                     break;
                 }
                 count++;
-                tempNode=tempNode.next;
+                tempNode = tempNode.next;
             }
         }
-        if (flag){
-            System.out.println("Element found at " +count+ " position");
-        }else {
+        if (flag) {
+            System.out.println("Element found at " + count + " position");
+        } else {
             System.out.println("Element is not found");
         }
 
+    }
+
+    public int size() {
+        int length = 0;
+        Node temp = head;
+        while (temp != null) {
+            length++;
+            temp = temp.next;
+        }
+        return length;
+    }
+
+    public void insertMiddle(int data) {
+        Node newNode = new Node(data);
+        int length = size();
+        int mid = length % 2 != 0 ? (length + 1) / 2 : length / 2;
+        Node prevNode = head;
+        Node nextNode = head;
+        for (int i = 0; i < mid; i++) {
+            prevNode = nextNode;
+            nextNode = nextNode.next;
+        }
+        prevNode.next = newNode;
+        newNode.next = nextNode;
+    }
+    public void deleteNode(int key){
+        Node current=head;
+        Node tempNode=null;
+        while (current != null && current.data != key ){
+            tempNode=current;
+            current=current.next;
+
+        }
+        if (current==null){
+            return;
+        }
+        tempNode.next=current.next;
     }
 }
